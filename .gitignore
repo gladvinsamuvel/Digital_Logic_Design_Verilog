@@ -1,0 +1,32 @@
+# Vivado project files
+*.jou
+*.log
+*.str
+*.xpr
+.Xil/
+*.cache/
+*.hw/
+*.ip_user_files/
+*.runs/
+*.sim/
+*.srcs/.Xil/
+NA
+vivado_pid*.str
+usage_statistics_webtalk.html
+usage_statistics_webtalk.xml
+webtalk_pa_prj/
+xgui/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# Backup files
+*~
+*.bak
