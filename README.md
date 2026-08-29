@@ -105,7 +105,8 @@ Version Control: Git & GitHub
 ## Author
 
 GLADVIN SAMUVEL V M
-Electronics & Communication Engineering
+
+Electronics & Communication Engineering,
 Aspiring VLSI Engineer
 
 Focus Areas:
