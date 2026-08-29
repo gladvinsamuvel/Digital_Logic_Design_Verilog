@@ -76,10 +76,15 @@ design-name/
 ## Tools & Technologies
 
 HDL: Verilog
+
 EDA Tool: AMD Vivado
+
 Simulation: Vivado Simulator
+
 Design Level: RTL
+
 Verification: Verilog Testbenches
+
 Version Control: Git & GitHub
 
 ## Tools Used
