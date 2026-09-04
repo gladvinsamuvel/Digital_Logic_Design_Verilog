@@ -153,4 +153,4 @@ Electronics & Communication Engineering,
 Aspiring VLSI Engineer
 
 Focus Areas:
- RTL Design | Verilog HDL | FPGA | Digital IC Design
+ RTL Design | Verilog HDL | ASIC | Digital IC Design |RISC V
