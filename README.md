@@ -12,26 +12,41 @@ Each design is self-contained with its own source code, testbench, and simulatio
 
 ```
 digital-design-verilog/
-├── README.md
-├── .gitignore
 │
-├── digital/
-│   ├── logic-gates/
-│   ├── mux-demux/
-│   ├── encoders-decoders/
-│   ├── adders/
-│   ├── multipliers/
-│   ├── flip-flops/
-│   ├── counters/
-│   ├── shift-registers/
-│   ├── memory/
-│   └── fsm/
+├── DIGITAL
+│   │
+│   ├── COMBINATIONAL
+│   │   ├── Logic Gates
+│   │   ├── MUX
+│   │   ├── DEMUX
+│   │   ├── Encoder
+│   │   ├── Decoder
+│   │   ├── Half Adder
+│   │   ├── Full Adder
+│   │   ├── Ripple Carry Adders
+│   │   └── Multipliers
+│   │
+│   ├── SEQUENTIAL
+│   │   ├── SR Flip-Flop
+│   │   ├── JK Flip-Flop
+│   │   ├── D Flip-Flop
+│   │   ├── T Flip-Flop
+│   │   ├── Counters
+│   │   ├── Ring Counter
+│   │   ├── Johnson Counter
+│   │   ├── Shift Register
+│   │   └── FSM
+│   │
+│   └── MEMORY
+│       └── 16 × 4 Memory
 │
-└── analog/
-    ├── cmos-basic-gates/
-    ├── differential-amplifier/
-    ├── cmos-inverting-amplifier/
-    └── cmos-amplifiers/
+└── ANALOG / CMOS VLSI
+    ├── CMOS Basic Gates
+    ├── Differential Amplifier
+    ├── CMOS Inverting Amplifier
+    ├── Common Source Amplifier
+    ├── Common Gate Amplifier
+    └── Common Drain Amplifier
 ```
 
 Each individual design folder follows a consistent internal layout:
@@ -51,27 +66,50 @@ design-name/
 
 ### Digital Design (Verilog)
 
-| Module | Description |
-|---|---|
-| `logic-gates` | Basic logic gate implementations |
-| `mux-demux` | 4:1, 8:1 Multiplexers and 1:4, 1:8 Demultiplexers |
-| `encoders-decoders` | 4:2, 8:3 Encoders and 2:4, 3:8 Decoders |
-| `adders` | Half Adder, Full Adder, 4-bit and 8-bit Ripple Carry Adders (including 8-bit RCA built from two 4-bit RCAs) |
-| `multipliers` | 2-bit and 4-bit Multipliers |
-| `flip-flops` | SR, JK, D, and T Flip-Flops |
-| `counters` | 4-bit Up/Down Counter, Mod-10, Mod-12, Ring and Johnson Counters |
-| `shift-registers` | Universal Shift Register |
-| `memory` | 16×4 Memory design |
-| `fsm` | Finite State Machine design |
-
-### Analog Design (CMOS)
+#### Combinational
 
 | Module | Description |
 |---|---|
-| `cmos-basic-gates` | CMOS implementation of basic logic gates |
-| `differential-amplifier` | Differential amplifier design and simulation |
-| `cmos-inverting-amplifier` | CMOS inverting amplifier design and simulation |
-| `cmos-amplifiers` | Common Source, Common Gate, and Common Drain amplifier configurations |
+| `Logic Gates` | Basic logic gate implementations |
+| `MUX` | 4:1, 8:1 Multiplexers |
+| `DEMUX` | 1:4, 1:8 Demultiplexers |
+| `Encoder` | 4:2, 8:3 Encoders |
+| `Decoder` | 2:4, 3:8 Decoders |
+| `Half Adder` | Half Adder |
+| `Full Adder` | Full Adder |
+| `Ripple Carry Adders` | 4-bit and 8-bit Ripple Carry Adders (including 8-bit RCA built from two 4-bit RCAs) |
+| `Multipliers` | 2-bit and 4-bit Multipliers |
+
+#### Sequential
+
+| Module | Description |
+|---|---|
+| `SR Flip-Flop` | SR Flip-Flop |
+| `JK Flip-Flop` | JK Flip-Flop |
+| `D Flip-Flop` | D Flip-Flop |
+| `T Flip-Flop` | T Flip-Flop |
+| `Counters` | 4-bit Up/Down Counter, Mod-10, Mod-12 Counters |
+| `Ring Counter` | Ring Counter |
+| `Johnson Counter` | Johnson Counter |
+| `Shift Register` | Universal Shift Register |
+| `FSM` | Finite State Machine design |
+
+#### Memory
+
+| Module | Description |
+|---|---|
+| `16 × 4 Memory` | 16×4 Memory design |
+
+### Analog Design (CMOS VLSI)
+
+| Module | Description |
+|---|---|
+| `CMOS Basic Gates` | CMOS implementation of basic logic gates |
+| `Differential Amplifier` | Differential amplifier design and simulation |
+| `CMOS Inverting Amplifier` | CMOS inverting amplifier design and simulation |
+| `Common Source Amplifier` | Common Source amplifier configuration |
+| `Common Gate Amplifier` | Common Gate amplifier configuration |
+| `Common Drain Amplifier` | Common Drain amplifier configuration |
 
 ## Tools & Technologies
 
@@ -95,7 +133,7 @@ Version Control: Git & GitHub
 
 ## How to Use
 
-1. Navigate to the specific design folder under `digital/` or `analog/`.
+1. Navigate to the specific design folder under `DIGITAL/COMBINATIONAL`, `DIGITAL/SEQUENTIAL`, `DIGITAL/MEMORY`, or `ANALOG / CMOS VLSI`.
 2. The `src/` folder contains the design source file.
 3. The `testbench/` folder contains the corresponding testbench used for simulation.
 4. The `results/` folder contains the RTL schematic and simulation waveform captured from Vivado.
